@@ -634,7 +634,7 @@ def display_qk_heatmap(qk_per_token):
     im = ax.imshow(qk_per_token.to(float).detach(), cmap='viridis')
     ax.set_xticks(range(len(prompt_split_as_tokens)))
     ax.set_yticks(range(len(prompt_split_as_tokens)))
-    ax.set_xticklabels(prompt_split_as_tokens)
+    ax.set_xticklabels(prompt_split_as_tokens, rotation=90)
     ax.set_yticklabels(prompt_split_as_tokens)
     ax.figure.colorbar(im, ax=ax)
     
